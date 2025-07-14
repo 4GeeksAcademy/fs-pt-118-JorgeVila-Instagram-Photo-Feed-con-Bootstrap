@@ -15,73 +15,90 @@
 <body>
     <header>
         <!--añado el el navbar-->
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1"><i class="fab fa-instagram"></i> Instagram</span>
+                <!--Boton que aparece cuando la pantalla se hace pequeña para mostrar el menu-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="dropdown">
-                    <!--añado el boton verde de crear post-->
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success mt-1" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Create a new post
-                    </button>
+                <div class="collapse navbar-collapse  justify-content-between " id="navbarTogglerDemo01">
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Crete a new post</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
 
-                                    <!--aqwui añado la etiqueta y el text arera-->
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Caption: </label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                            rows="3"></textarea>
+                    <a class="navbar-brand" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    
+                    <div class="d-flex ">
+                        <!-- boton del modal-->
+                        <button type="button" class="btn btn-success mt-1 me-2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
 
-                                        <!--aqwui añado los botones del modal-->
-                                        <br>
-                                        <button type="button" class="btn btn-outline-secondary "> <i
-                                                class="fas fa-camera"></i></button>
-                                        <button type="button" class="btn btn-outline-secondary"><i
-                                                class="fas fa-map-marker-alt"></i></button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Crete a new post</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
+                                    <div class="modal-body">
+
+                                        <!--aqwui añado la etiqueta y el text arera-->
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Caption:
+                                            </label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+
+                                            <!--aqwui añado los botones del modal-->
+                                            <br>
+                                            <button type="button" class="btn btn-outline-secondary "> <i
+                                                    class="fas fa-camera"></i></button>
+                                            <button type="button" class="btn btn-outline-secondary"><i
+                                                    class="fas fa-map-marker-alt"></i></button>
+                                        </div>
 
 
 
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
+                        <!--Ahora coloco el dropdawn-->
+                        <div class="btn-group dropstart ">
+                            <!--añado el boton del dropdown poniendole el icono del engranaje-->
+                            <button class="btn btn-secondary dropdown-toggle mt-1" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-gear"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Accesability</a></li>
+                                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <!--añado el boton del dropdown poniendole el icono del engranaje-->
-                    <button class="btn btn-secondary dropdown-toggle mt-1" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fas fa-gear"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Accesability</a></li>
-                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                    </ul>
+
+
+
                 </div>
-
-
-
-
+            </div>
         </nav>
-
+        <!--------------------------------------------------------------->
         <div class="container">
             <div class="row ">
                 <div class="col-12 text-center">
